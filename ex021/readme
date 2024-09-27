@@ -1,0 +1,17 @@
+Sepre queremos que algo desapareça de em um emenveo. por exmplo qunado estamos contruindo um menu. precisos que algins elentos aparem e diminuam. por isso usamos: na finção animete() a propriedade 'toggle' no CSS.
+
+por ex:
+
+    <button id="btn_tamanho">Diminuir / Aumentar</button>
+    <button id="btn_mostrar">Ocultar / Mostrar</button>
+
+        $('#btn_tamanho').click(
+            function(){
+                $('#caixa').animate({width: 'toggle', height: 'toggle'},{duration:1000})
+            }
+        )
+        $('#btn_mostrar').click(
+            function(){
+                $('#caixa').animate({opacity:'toggle'},{duration:1000})
+            }
+        )

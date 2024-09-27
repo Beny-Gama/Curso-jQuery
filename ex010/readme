@@ -1,0 +1,22 @@
+como parar a propagação do evento? [jQuery]
+
+com apenas esse linha de cogido vc acaba dispareando  eventos indesejados ao clicar em outras chaves:
+
+$('div').click(()=>{alert('Evento disparado no DIV')})
+
+seria interesado que essa progacação de eventos para os elementos anteriores:
+
+<div>
+    <p>
+        CFB Cursos <br><br><br>
+        <span>Curso de JQuary<span>
+    </p>
+</div>
+
+No caso acima, qunado usando click() na <div>, ao usuario clicar no <p> e no <span>, o comportamento de click() tambem é copiado.
+
+Para que isso pare de acotecer, basta usar a função o event.stopPropagation() na variavel que vc não quer que acione, ex:
+
+$('p').click(()=>{event.stopPropagation();alert('Evento disparado no P')})
+
+$('span').click(()=>{event.stopPropagation();alert('Evento disparado no SPAN')}) 

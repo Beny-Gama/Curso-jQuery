@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Curso de Jquery</title>
+    <style>
+        p {
+            background-color: #ffa
+        }
+        h3 {
+            background-color: green;
+        }
+        .borda {
+            border: 2px solid red;
+        }
+ 
+    </style>
+</head>
+<body>
+    <p class="borda">Bernardo Gama</p>
+    <P>curso de Canvas</P>
+    <p class="borda">youtube.com/cfbcursos.com</p>
+    
+    <h3 class="borda">Bernardo Gama</h3>
+    <h3>curso de Canvas</h3>
+    <h3>youtube.com/cfbcursos.com</h3>
+    <h3>www.cfbcursos.com.br</h3>
+    <h3>Filtrando elementos</h3>
+    <script>
+        $('p').filter('.borda').css({'color':'#f00'}) // todos que tem a clase x vão ter seus valores aterados
+        $('p').not('.borda').css({'color':'#0f0'}) // todos que não tem a clase x vão ter seus valores aterados
+    </script>
+</body>
+</html>

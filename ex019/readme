@@ -1,0 +1,38 @@
+se vc queier mostar esconder determinado elemto HTML da sua pagina vc pode usar as funçoes show() para mostar, e hide() para ocultar.
+
+No Ex abaixo usei os botes para fazer essa altomação em uma caixa em expesifico.
+
+    $('#btn_mostar').click(
+        function(){
+            $('#caixa').show()
+        }
+    )
+
+    $('#btn_ocultar').click(
+        function(){
+            $('#caixa').hide()
+        }
+    ) 
+
+O mesmo pode ser usado para a funçoes toggle() que já faz esse opção altomaticamente para vc sem precisar usar as funçoes acima.
+
+    $('#btn_mostarOcultar').click(
+            function(){
+                $('#caixa').toggle()
+            }
+        )
+
+podemos melhorar esse cogigo acionoando uma validação e alterando os valores dos cogigo idicando qunado o botão esta olcultado ou não:
+
+    <button id="btn_mostarOcultar"> Ocultar </button>    
+
+    $('#btn_mostarOcultar').click(
+        function(){
+            $('#caixa').toggle()
+            if($('#caixa').is(':visible')){
+                $('#btn_mostarOcultar').text('Ocultar')
+            }else{
+                $('#btn_mostarOcultar').text('Mostrar')
+            }
+        }
+    )

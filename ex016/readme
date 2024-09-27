@@ -1,0 +1,17 @@
+temhna como base essa fução:
+
+$('#caixa').click(
+            function(){
+                alert('texto: '+ $(this).text())
+            }
+        )
+
+função text() é usada quando o se quer pergar o conteudo do que esta escrito no elemento:
+
+                alert('texto: '+ $(this).text())
+
+A função HTML() por sua ves, tras o elemento HTML inteor
+
+
+                alert('texto: '+ $(this).html())
+

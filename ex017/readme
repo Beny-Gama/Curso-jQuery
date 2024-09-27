@@ -1,0 +1,38 @@
+essa function é usada para encorar o que queremos dentro no nosso codigo:
+
+$('#caixa').click(
+            function(){
+                alert($(this).attr('id'))
+            }
+        )
+
+
+ usando o codigo 'id' no final. encorar o que quisemro
+
+        $(this).attr('id')
+
+
+    
+usando o 'style' no final para encontar o cogigo CSS que interfere na quele cogigo:
+
+        $(this).attr('style')
+
+
+O mais importante e alter o valor de um atributo usando qual parametro vc quer alterar.:
+
+    <button id="btn_vermelho">vermelho</button>
+    <button id="btn_azul">azul</button>
+
+        $('#btn_vermelho').click(
+            function(){
+                $('#caixa').attr('class','vermelho')
+            }
+        )
+
+        $('#btn_azul').click(
+            function(){
+                $('#caixa').attr('class','azul')
+            }
+        )
+
+

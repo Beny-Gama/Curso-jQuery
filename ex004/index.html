@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Curso de Jquery</title>
+    <style>
+        #bloco {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="bloco"> </div>
+    <p id="texto"></p>
+
+
+    <script>
+        $('#bloco').click(()=>{
+            $('#texto').text('clicado no quadrado')
+        })
+        $('#bloco').mouseenter(()=>{
+            $('#texto').click('mause entrou no quadrado')
+        })
+        $('#bloco').mouseleave(()=>{
+            $('#texto').click('mause saiu do quadrado')
+        })
+        $('#bloco').mousemove(()=>{
+            $('#texto').click('mause movendo sobre o quadrado')
+        })
+        $('#texto').text('CBF Cursos')
+    </script>
+</body>
+</html>

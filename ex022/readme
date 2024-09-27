@@ -1,0 +1,10 @@
+grassas a propriedade de aninhamento do jQuery é possivel concatear funcoes 
+por ex a função delay(). 
+o deley() e utiliado quando queremos adicionar um atrazo na função animete()
+Onde cada segundo é uqual 1000 
+
+    $('#btn_tamanho').click(
+            function(){
+                $('#caixa').delay(1000).animate({width:'500px'}).delay(1000).animate({height:'500px'})
+            }
+        )

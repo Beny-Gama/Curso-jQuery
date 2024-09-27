@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Curso de Jquery</title>
+    <style>
+        .caixa{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: darkblue;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            padding: 10px;
+            text-align: center;
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa" class="caixa">
+        <h3>CFB Cursos</h3>
+        <p>Curso de jQuere</p>
+    </div>
+
+    <button id="btn_ocultar">Ocultar</button>
+    <button id="btn_mostrar">Mostrar</button>
+    <button id="btn_ocultar_e_mostrar">Ocultar e Mostrar</button>
+    <button id="btn_ocultar_ou_mostrar">Ocultar ou Mostrar</button>
+    
+    <script>
+        $('#btn_mostrar').click(
+            function(){
+                $('#caixa').fadeIn(200)  
+            }
+        )
+
+        $('#btn_ocultar').click(
+            function(){
+                $('#caixa').fadeOut(200)  
+            }
+        )
+
+        $('#btn_ocultar_e_mostrar').click(()=>{
+            $('#caixa').fadeOut().delay(100).fadeIn();
+        })
+
+        $('#btn_ocultar_ou_mostrar').click(()=>{
+            if($('#caixa').is(':visible')){
+                $('#caixa').fadeOut()
+            }else{
+                $('#caixa').fadeIn()
+            }
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+Entendo como usar o método target [event.target] em jQuery.
+
+Com o metodo target vc conseque entender o que acontece com um usuario. usa o seu programa.
+
+$(document).click((event)=>{
+    $('#resultado').text('Objeto clicado: ' + event.target.id)
+        if(event.target.id == 'resultado'){
+       alert('Resultado Clicado!')
+        }})

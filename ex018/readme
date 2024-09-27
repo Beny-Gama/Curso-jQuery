@@ -1,0 +1,15 @@
+se vc queier mostar esconder determinado elemto HTML da sua pagina vc pode usar as funçoes show() para mostar, e hide() para ocultar.
+
+No EX abaixo usei botes para fazer essa altomação em uma caixa em expesifico.
+
+$('#btn_mostar').click(
+    function(){
+        $('#caixa').show()
+    }
+)
+
+$('#btn_ocultar').click(
+    function(){
+        $('#caixa').hide()
+    }
+)

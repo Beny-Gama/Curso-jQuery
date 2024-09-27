@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Curso de Jquery</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            border: none;
+        }
+
+        .menu {
+            background-color: #DDD;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .itemMenu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: blue;
+            color: #fff;
+            text-transform: capitalize;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="menu" class="menu">
+        <div class="itemMenu">Home</div>
+        <div class="itemMenu">jQuery</div>
+        <div class="itemMenu">Canvas</div>
+        <div class="itemMenu">pythpn</div>
+        <div class="itemMenu">Arduino</div>
+    </div>
+    
+    <script>
+        $('.itemMenu').mouseover(
+            function(){
+                $(this).fadeTo(200,0.2)
+            }
+        )
+        $('.itemMenu').mouseleave(
+            function(){
+                $(this).fadeTo(200,1)
+            }
+        )
+    </script>
+
+</body>
+</html>

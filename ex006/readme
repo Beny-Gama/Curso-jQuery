@@ -1,0 +1,7 @@
+voce pode usar as funcões de aoutra metodos usado o "trigger".
+EX:
+    $('#bloco2').click(()=>{
+        $('#bloco'),trigger('click')
+    })
+
+voce estancia esse objeto e 

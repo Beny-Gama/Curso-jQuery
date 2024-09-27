@@ -1,0 +1,38 @@
+funções fadeIN e fadeOUT
+
+as função fadeIN(), faz a teg HTML apredercer
+
+    	$('#btn_mostrar').click(
+            function(){
+                $('#caixa').fadeIn(200)  
+            }
+        )
+
+        
+A função faceOut(), fazer o teg HTML desaparecer
+
+        $('#btn_ocultar').click(
+            function(){
+                $('#caixa').fadeOut(200)  
+            }
+        )
+
+
+Tambem é possivel aninhas e cirar sequece.
+Sedo muito util, para dar fidback para o usuario de clique, por exemplo:
+
+    $('#btn_ocultar_e_mostrar').click(()=>{
+            $('#caixa').fadeOut().delay(100).fadeIn();
+        })
+
+
+se caso nessasairo podemos cirar um validação dos elementos:
+
+        $('#btn_ocultar_ou_mostrar').click(()=>{
+            if($('#caixa').is(':visible')){
+                $('#caixa').fadeOut()
+            }else{
+                $('#caixa').fadeIn()
+            }
+        })
+

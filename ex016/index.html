@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Curso de Jquery</title>
+</head>
+<body>
+    <div id="caixa">
+        <h2>CFB Cursos</h2>
+        <p>curso de JQuery</p>
+        <p>Bernardo Gama</p>
+
+    </div>
+    <h2>Cruso de JQuere</h2>
+    <input type="text" id="nome"/>
+    <script>
+        $('#caixa').click(
+            function(){
+                alert('texto: '+ $(this).html())
+            }
+        )
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>valor 1</label>
+        <input type="text" id="v1" value="0">
+        <br/>
+        <label>valor 2</label>
+        <input type="text" id="v2" value="0">
+        <br/>
+        <label>resultado</label>
+        <input type="text" id="res" value="0">
+        <br/>
+        <button id="btn_somajs">Soma JS</button>
+        <button id="btn_sonajq">Somar JQ</button>
+    </div>
+</body>
+<script>
+    	let btn_somajs = document.getElementById('btn_somajs').addEventListener('click',()=>{
+            let v1 = document.getElementById('v1').value
+            let v2 = document.getElementById('v2').value
+            soma=parseInt(v1)+parseInt(v2) //parceInt = concerte string em numero indeiro
+            let res = document.getElementById('res').value = soma
+        })
+
+        $('#btn_sonajq').click(()=>{
+            let v1=parseInt($('#v1').val())
+            let v2=parseInt($('#v2').val())
+            let soma=v1+v2
+            $('#res').val(soma)
+        })
+
+</script>
+</html>

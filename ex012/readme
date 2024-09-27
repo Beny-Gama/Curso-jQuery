@@ -1,0 +1,46 @@
+Aprendendo sobre os métodos children e find [jQuery]
+
+
+imangine esse estrura:
+    <div>
+        <ul>
+            <li>
+                <h3>bgama18</h3>
+                <samp>Curso de JQuary</samp>
+                <p>seletores parent</p>
+            </li>
+        </ul>
+    </div>
+
+
+parece que temos elementos, no html, que são pais e filhos.
+
+O children() aponta para o elemento filho direto:
+    $('div').children().css({'border':'1px solid red'}) 
+por expelmo esse codigo e ele vai interferir no elemeto sequinte do HTML.
+
+
+tambem é possovel, ao invels de apontar para todos os seus filhos, podenso apontar para um elentos expesifico. Com a função find():
+
+    $('div').find('li').css({'border':'1px solid red'})
+
+tambem é possivel, indicar para um filho em expesifoco. pela seuqencia:
+
+first = para o primento 
+    $('div').find('ul:first').css({'border':'1px solid red'}) 
+
+
+last = para o ultimo 
+    $('div').find('ul:last').css({'border':'1px solid red'})
+
+* = Todos
+    $('div').find('ul:*').css({'border':'1px solid red'})
+
+
+
+
+
+
+
+
+

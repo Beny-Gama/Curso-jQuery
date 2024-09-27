@@ -1,0 +1,35 @@
+Aprendendo sobre os métodos parent() [jQuery] 
+
+imangine esse estrura:
+    <div>
+        <ul>
+            <li>
+                <h3>bgama18</h3>
+                <samp>Curso de JQuary</samp>
+                <p>seletores parent</p>
+            </li>
+        </ul>
+    </div>
+
+perseva que temos elementos, no html, que são pais e filhos.
+no JQuary qunado manipular esses elementos o poder é pior do que tudo.
+
+O primero é o metodo parent(). ele aponta diretamente para o elemento. Ou seja, aquilo que foi descriso so acontece no elemento direcionado:
+
+    $('p').parent().css({'border':'1px solid red'})
+    $('li').parent().css({'border':'1px solid blue'})
+    $('ul').parent().css({'border':'1px solid green'})
+    $('div').parent().css({'border':'1px solid yellow'})
+    $('body').parent().css({'border':'1px solid black'})
+
+
+O sequndo é o metodo parents(). Todos os elementos pais e irmão herdam os elementos do filho:
+
+    $('p').parents().css({'border':'1px solid red'})
+
+    
+O sequndo é o metodo parentsUntil(). Todos os elementos pais e irmão herdam os elementos do filho, até determinado elemento:
+
+    $('p').parentsUntil('div').css({'border':'1px solid red'})
+
+

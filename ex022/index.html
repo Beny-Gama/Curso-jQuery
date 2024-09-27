@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Curso de Jquery</title>
+    <style>
+        .caixa{
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            background-color: darkblue;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            padding: 10px;
+            text-align: center;
+            /* box-sizing: border-box; */
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa" class="caixa">
+        <h3>CFB Cursos</h3>
+        <p>Curso de jQuere</p>
+    </div>
+
+    <button id="btn_tamanho">Diminuir / Aumentar</button>
+    <button id="btn_diminuir">Diminuir</button>
+    <button id="btn_mostrar">Ocultar / Mostrar</button>
+    
+    <script>
+        $('#btn_tamanho').click(
+            function(){
+                $('#caixa').delay(1000).animate({width:'500px'}).delay(1000).animate({height:'500px'})
+            }
+        )
+
+        $('#btn_diminuir').click(
+            function(){
+                $('#caixa').delay(1000).animate({width:'200px'}).delay(1000).animate({height:'200px'})
+            }
+        )
+        $('#btn_mostrar').click(
+            function(){
+                
+            }
+        )
+    </script>
+</body>
+</html>

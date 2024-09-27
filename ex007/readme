@@ -1,0 +1,11 @@
+como cirar um evento em jquery
+basta usar a função "document" na variavel "event".
+EX:
+ $(document).mousemove((event)=>)
+
+como pegar a posição do mause do usuario:
+Com esseas variaves
+EX:
+event.pageX 
+event.pageY
+
