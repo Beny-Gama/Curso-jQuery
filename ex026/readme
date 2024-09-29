@@ -1,0 +1,7 @@
+usando a função finish() voce finaliza a nimação no meio:
+
+
+$('#btn_finalizar').click(()=>{
+            $('#caixa').finish()
+        })
+

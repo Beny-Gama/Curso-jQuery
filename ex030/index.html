@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang=" ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <title>Curso de Jquery</title>
+    <style>
+        .caixa {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="btnAnimar">Animar</button>
+        <button id="btnProximo">próximo</button>
+        <button id="btnParar">Parar</button>
+        <button id="btnFim">fim</button>
+    </p>
+    
+    <div id="caixa" class="caixa"></div>
+
+    <script>
+        $('#btnAnimar').click(()=>{
+            $('#caixa').animate({left:800},{duration:2000})
+            $('#caixa').animate({top:400},{duration:2000})
+            $('#caixa').animate({left:0},{duration:2000})
+            $('#caixa').animate({top:50},{duration:2000})
+        })
+        $('#btnProximo').click(()=>{
+            $('#caixa').stop() //padrão = limpar fila : false, pular para proxima : false
+        })
+        $('#btnParar').click(()=>{
+            $('#caixa').stop(true,false) 
+        })
+        $('#btnFim').click(()=>{
+            $('#caixa').stop(false,true)
+        })
+    </script>
+</body>
+</html>

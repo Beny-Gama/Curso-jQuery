@@ -21,15 +21,20 @@
     <p>
         <button id="btn_finalizar">Finalizado</button>
     </p>
+    <p id="info"></p>
     <div id="caixa" class="caixa"></div>
+    
 
     <script>
+        const cx = $('#caixa')
         $('#btn_aumentar').click(()=>{
-            $('#caixa').animate({width:800},10000)
+            $('#caixa').animate({width:800},{duration:5000,complete:()=>{$('#info').text(cx.queue().length)}})
+            $('#info').text(cx.queue().length)
         })
 
         $('#btn_diminuir').click(()=>{
-            $('#caixa').animate({width:100},10000)
+            $('#caixa').animate({width:100},{duration:5000,complete:()=>{$('#info').text(cx.queue().length)}})
+            $('#info').text(cx.queue().length)
         })
 
         $('#btn_finalizar').click(()=>{

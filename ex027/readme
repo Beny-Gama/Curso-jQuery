@@ -1,0 +1,31 @@
+Obtendo informações da fila de animações com a função queue() em jQuery 
+
+A função é queue().length e possivel saber qual é a qunatidada de animaçoes que exitem no cach que foram execidades no nosso site.
+
+no caso de escrever o codigo da mandera abacho não exite uma atualização dos dados:
+
+
+        $('#btn_aumentar').click(()=>{
+            $('#caixa').animate({width:800},5000)
+            $('#info').text($('#caixa').queue().length)
+        })
+
+        $('#btn_diminuir').click(()=>{
+            $('#caixa').animate({width:100},5000)
+            $('#info').text($('#caixa').queue().length)
+        })
+
+
+dessa maneira o cogigo atualiza de forma mais inteligente.
+
+
+        const cx = $('#caixa')
+        $('#btn_aumentar').click(()=>{
+            $('#caixa').animate({width:800},{duration:5000,complete:()=>{$('#info').text(cx.queue().length)}})
+            $('#info').text(cx.queue().length)
+        })
+
+        $('#btn_diminuir').click(()=>{
+            $('#caixa').animate({width:100},{duration:5000,complete:()=>{$('#info').text(cx.queue().length)}})
+            $('#info').text(cx.queue().length)
+        })

@@ -1,0 +1,24 @@
+funções slideUP() e slideDown() em jQuery
+
+            $('#btcCima').click(()=>{
+                $('#menus').slideUp()
+            })
+
+            $('#btcBaixo').click(()=>{
+                $('#menus').slideDown()
+            })
+podemos acresner tempo  a esse sendo que 1 segundo é igual a 1000
+
+            slideUp(2000) = 2 segundos
+
+            slideDown(1000) = 1 segundo
+
+podemos usar uma funçao para mandar uma funcão de call back:
+
+        slideUp(()=>{
+            $('#msg').text('menu oculto')
+        })
+
+        slideDown(()=>{
+            $('#msg').text('menu exibido')
+        })
