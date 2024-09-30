@@ -1,6 +1,6 @@
 Supondo que temos essa animação:
 
-$('#btnAnimar').click(()=>{
+    $('#btnAnimar').click(()=>{
             $('#caixa').animate({left:800},{duration:2000})
             $('#caixa').animate({top:400},{duration:2000})
             $('#caixa').animate({left:0},{duration:2000})
@@ -10,7 +10,7 @@ $('#btnAnimar').click(()=>{
 Exite uma maneira de de para a a nimação com a fincão stop().
 
     $('#btnProximo').click(()=>{
-    $('#caixa').stop()
+        $('#caixa').stop()
     })
 
 
@@ -19,13 +19,22 @@ Onde por padrão vem com duas variaves boolianas como false:
     2. pular para proxima: pula para a prozxima acão do cache: executa a proxima animação do site.
 
 
-se quisermos para umas das animações no meio 
+Se quisermos passar para a proximo animação sem o final dos valores 
+ex: .animate({left:800}) Ela ira parar o objeto no momento em que foi disparada a ação .stop():  
+
     $('#btnProximo').click(()=>{
         $('#caixa').stop()
     })
 
-Se quisermos ir para a 
+Ele para a animação por completo: 
 
     $('#btnParar').click(()=>{
         $('#caixa').stop(true,false) 
+    })
+
+Se quisermos passar para a proximo animação e finalizar.
+ex: .animate({left:800}) Ela ira deixar o objeto no momento em que foi programado anteriormente pelo .animate():  
+
+    $('#btnFim').click(()=>{
+        $('#caixa').stop(false,true)
     })
